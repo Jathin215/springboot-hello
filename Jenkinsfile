@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     tools {
-        mvn "3.8.7"
+        maven "3.8.7"
     
     }
     stages {
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo "Hello Java Express"
                 sh 'ls'
-                sh 'docker build -t  anvbhaskar/docker_jenkins_springboot:${BUILD_NUMBER} .'
+                sh 'docker build -t  jathin215/docker_jenkins_springboot:${BUILD_NUMBER} .'
             }
         }
         stage('Docker Login'){
