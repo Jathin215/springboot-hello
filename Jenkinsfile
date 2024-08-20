@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo "Hello Java Express"
                 sh 'ls'
-                sh 'docker build -t  jathin215/docker_jenkins_springboot:${BUILD_NUMBER} .'
+                sh 'docker build -t  jathin215/samp-repository:tagname${BUILD_NUMBER} .'
             }
         }
         stage('Docker Login'){
